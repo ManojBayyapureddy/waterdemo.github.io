@@ -1,77 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PureDrop Water</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PureDrop Water</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.png">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-    <h1>💧 PureDrop Water</h1>
-    <p>Clean • Safe • Delivered to Your Doorstep</p>
-</header>
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">
+    <img src="assets/logo.png" alt="logo">
+    <span>PureDrop</span>
+  </div>
 
-<nav>
+  <nav>
+    <a href="#home">Home</a>
     <a href="#products">Products</a>
     <a href="#about">About</a>
-    <a href="#contact">Order</a>
-</nav>
+    <a href="#contact" class="nav-btn">Order</a>
+  </nav>
+</header>
 
-<section class="hero">
-    <h2>Fresh Drinking Water Delivered Fast</h2>
-    <p>Book your water cans & bottles instantly</p>
-    <a href="#contact" class="btn">Order Now</a>
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1>Pure Water. Delivered.</h1>
+    <p>Premium quality drinking water for your home & office</p>
+    <a href="#products" class="btn">Shop Now</a>
+  </div>
 </section>
 
-<section id="products">
-    <h2>Our Products</h2>
+<!-- PRODUCTS -->
+<section id="products" class="products">
+  <h2>Our Products</h2>
+
+  <div class="grid">
 
     <div class="card">
-        <img src="assets/can20l.jpg" alt="20L Water Can">
-        <h3>20L Water Can</h3>
-        <p>Perfect for home & office use</p>
-        <p><strong>$5</strong></p>
+      <img src="assets/can20l.jpg">
+      <h3>20L Water Can</h3>
+      <p>$5</p>
+      <button onclick="orderNow('20L Water Can')">Order</button>
     </div>
 
     <div class="card">
-        <img src="assets/bottle1l.jpg" alt="1L Bottle Pack">
-        <h3>1L Bottle Pack (12)</h3>
-        <p>Convenient & portable</p>
-        <p><strong>$8</strong></p>
+      <img src="assets/bottle1l.jpg">
+      <h3>1L Bottle Pack</h3>
+      <p>$8</p>
+      <button onclick="orderNow('1L Bottle Pack')">Order</button>
     </div>
 
     <div class="card">
-        <img src="assets/bottle500ml.jpg" alt="500ml Bottle Pack">
-        <h3>500ml Bottle Pack (24)</h3>
-        <p>Ideal for events</p>
-        <p><strong>$10</strong></p>
+      <img src="assets/bottle500ml.jpg">
+      <h3>500ml Bottle Pack</h3>
+      <p>$10</p>
+      <button onclick="orderNow('500ml Bottle Pack')">Order</button>
     </div>
+
+  </div>
 </section>
 
-<section id="about">
-    <h2>About Us</h2>
-    <p>We deliver purified, mineral-rich drinking water with strict quality standards. Serving homes and businesses with reliable doorstep delivery.</p>
+<!-- ABOUT -->
+<section id="about" class="about">
+  <h2>Why Choose Us</h2>
+  <p>We provide safe, purified and mineral-balanced water with fast doorstep delivery and reliable service.</p>
 </section>
 
-<section id="contact">
-    <h2>Place Your Order</h2>
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <h2>Quick Order</h2>
 
-    <form id="orderForm">
-        <input type="text" id="name" placeholder="Your Name" required>
-        <input type="text" id="phone" placeholder="Phone Number" required>
-        <textarea id="order" placeholder="Your Order (e.g. 2 cans, 1 pack bottles)" required></textarea>
+  <input type="text" id="name" placeholder="Your Name">
+  <input type="text" id="phone" placeholder="Phone Number">
 
-        <button type="submit">Order via WhatsApp</button>
-    </form>
+  <button onclick="sendOrder()">Order via WhatsApp</button>
 </section>
 
 <footer>
-    <p>© 2026 PureDrop Water</p>
+  <p>© 2026 PureDrop Water</p>
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
